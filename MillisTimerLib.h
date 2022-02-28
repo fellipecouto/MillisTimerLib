@@ -18,11 +18,11 @@ class MillisTimerLib {
     //Returns true every time cycle
     bool timer();
 	
-	//Sets a new delay timer value in milliseconds
-	void setDelay(long delayTime);
+    //Sets a new delay timer value in milliseconds
+    void setDelay(long delayTime);
 	
-	//Returns the current delay value in milliseconds
-	long getDelay();
+    //Returns the current delay value in milliseconds
+    long getDelay();
     
   private:
     unsigned long _oldTime = 0;
