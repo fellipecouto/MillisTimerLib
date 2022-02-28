@@ -26,6 +26,6 @@ class MillisTimerLib {
     
   private:
     unsigned long _oldTime = 0;
-    long _time = 0;
+    unsigned long _time = 0;
 };
 #endif
