@@ -1,2 +1,4 @@
 MillisTimerLib	KEYWORD1
 timer	KEYWORD2
+setDelay	KEYWORD2
+getDelay	KEYWORD2

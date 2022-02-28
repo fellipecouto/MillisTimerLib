@@ -10,10 +10,10 @@
 #include <Arduino.h>
 
 unsigned long _oldTime = 0;
-long _time = 0;
+unsigned long _time = 0;
 
 MillisTimerLib::MillisTimerLib(long delayTime) {
-  _time = delayTime;
+  setDelay(delayTime);
 }
 
 bool MillisTimerLib::timer() {
@@ -22,4 +22,16 @@ bool MillisTimerLib::timer() {
     return true;
   }
   return false;
+}
+
+void MillisTimerLib::setDelay(long delayTime) {
+  if (delayTime > 0) {
+    _time = delayTime;
+  }else{
+    _time = 0;
+  }
+}
+
+long MillisTimerLib::getDelay(){
+	return _time;
 }
