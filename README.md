@@ -20,4 +20,5 @@ long getDelay();
 ```
 
 Author : Fellipe Couto [ http://www.efeitonerd.com.br ]
+
 Date : 2020-06-07
