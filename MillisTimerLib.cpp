@@ -17,21 +17,29 @@ MillisTimerLib::MillisTimerLib(long delayTime) {
 }
 
 bool MillisTimerLib::timer() {
-  if (millis() - _oldTime >= _time) {
-    _oldTime = millis();
-    return true;
-  }
+  if (timerCount() >= _time) {
+      reset();
+      return true;
+    }
   return false;
+}
+
+long MillisTimerLib::timerCount() {
+  return millis() - _oldTime;
 }
 
 void MillisTimerLib::setDelay(long delayTime) {
   if (delayTime > 0) {
     _time = delayTime;
-  }else{
+  } else {
     _time = 0;
   }
 }
 
-long MillisTimerLib::getDelay(){
+long MillisTimerLib::getDelay() {
   return _time;
+}
+
+void MillisTimerLib::reset() {
+  _oldTime = millis();
 }

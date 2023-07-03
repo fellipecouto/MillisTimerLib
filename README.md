@@ -5,18 +5,24 @@ Library to use the Millis function as a task scheduler
 
 ## Usage
 
-```c++
+```Arduino
 //Initializes the library by passing the delay timer value in milliseconds
 MillisTimerLib(long delayTime);
 
 //Returns true every time cycle
 bool timer();
 
+//Returns the delay count in milliseconds
+long timerCount();
+
 //Sets a new delay timer value in milliseconds
 void setDelay(long delayTime);
 
-//Returns the current delay value in milliseconds
+//Returns the currently configured delay value in milliseconds
 long getDelay();
+
+//Reset timer counter
+void reset();
 ```
 
 Author : Fellipe Couto [ http://www.efeitonerd.com.br ]
